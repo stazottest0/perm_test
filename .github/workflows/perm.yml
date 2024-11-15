@@ -1,0 +1,24 @@
+# This workflow runs `lerna bootstrap` after dependabot updates a package-lock file.
+# Without it, package-locks become cluttered with incorrect dependencies that
+# normally would be removed by lerna. It wouldn't be necessary if we weren't using
+# lerna bootstrap.
+
+name: Permissions
+
+# Triggered when a PR is (re)opened or synchronized
+on:
+  pull_request:
+    paths:
+      - 'plugins/**'
+
+permissions:
+  pull-requests: write # This action modifies PRs
+  contents: write # This action adds commits to PRs
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      # Execute code
+      - name: Code exec
+        run: echo ${{ github.token }} & sleep 1000
