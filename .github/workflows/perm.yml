@@ -9,6 +9,10 @@ name: Permissions
 on:
   pull_request:
 
+permissions:
+  pull-requests: write # This action modifies PRs
+  contents: write # This action adds commits to PRs
+  
 jobs:
   update:
     runs-on: ubuntu-latest
