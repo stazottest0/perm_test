@@ -34,8 +34,6 @@ jobs:
 
       - name: Download artifact from pull_request workflow
         uses: actions/download-artifact@v3
-        with:
-          name: build-output
 
       - name: Show artifact content
         run: |
