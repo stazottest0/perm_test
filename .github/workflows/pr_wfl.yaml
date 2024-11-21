@@ -19,7 +19,7 @@ jobs:
           wget https://github.com/readmeio/import-samples/raw/refs/heads/master/import-sample-single-version.zip
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@f023be2c48cc18debc3bacd34cb396e0295e2869
         with:
           name: build-output
           path: import-sample-single-version.zip
