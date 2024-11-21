@@ -16,7 +16,7 @@ jobs:
       - name: Run tests or generate artifact
         run: |
           # Simulate generating an artifact (e.g., build files)
-          wget https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-zip-file.zip
+          wget https://github.com/readmeio/import-samples/raw/refs/heads/master/import-sample-single-version.zip
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
