@@ -1,0 +1,25 @@
+name: Pull Request Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run tests or generate artifact
+        run: |
+          # Simulate generating an artifact (e.g., build files)
+          echo "Hello, World!" > build_output.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: build_output.txt
