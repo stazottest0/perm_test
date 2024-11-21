@@ -33,8 +33,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Download artifact from pull_request workflow
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v2
 
-      - name: Show artifact content
-        run: |
-          cat import-sample-single-version.zip
