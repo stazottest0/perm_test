@@ -23,3 +23,19 @@ jobs:
         with:
           name: build-output
           path: build_output.txt
+
+          
+  retrieve-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download artifact from pull_request workflow
+        uses: actions/download-artifact@v3
+        with:
+          name: build-output
+
+      - name: Show artifact content
+        run: |
+          cat build_output.txt
