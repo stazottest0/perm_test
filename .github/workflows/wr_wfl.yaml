@@ -2,11 +2,10 @@ name: Workflow Run Workflow
 
 on:
   repository_dispatch:
-    types: [trigger-second-workflow] 
-  # workflow_run:
-  #   workflows: ["Pull Request Workflow"]
-  #   types:
-  #     - completed
+   workflow_run:
+     workflows: ["Pull Request Workflow"]
+     types:
+       - completed
 
 jobs:
   retrieve-artifacts:
