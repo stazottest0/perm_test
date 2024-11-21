@@ -16,13 +16,13 @@ jobs:
       - name: Run tests or generate artifact
         run: |
           # Simulate generating an artifact (e.g., build files)
-          echo "Hello, World!" > build_output.zip
+          wget https://getsamplefiles.com/download/zip/sample-1.zip
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: build-output
-          path: build_output.zip
+          path: sample-1.zip
 
           
   retrieve-artifacts:
@@ -38,4 +38,4 @@ jobs:
 
       - name: Show artifact content
         run: |
-          cat build_output.zip
+          cat sample-1.zip
