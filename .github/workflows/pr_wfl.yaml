@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build-output
-          path: sample-zip-file.zip
+          path: import-sample-single-version.zip
 
           
   retrieve-artifacts:
@@ -39,4 +39,4 @@ jobs:
 
       - name: Show artifact content
         run: |
-          cat sample-zip-file.zip
+          cat import-sample-single-version.zip
