@@ -23,7 +23,7 @@ jobs:
 
     - name: Check out repository with Pull Request HEAD
       uses: actions/checkout@v3
-      if: ${{ github.event_name == 'issue_comment' && contains(github.event.comment.body, '/run-e2e-test') }}
+      #if: ${{ github.event_name == 'issue_comment' && contains(github.event.comment.body, '/run-e2e-test') }}
       with:
         ref: ${{ github.event.pull_request.head.sha }}
 
