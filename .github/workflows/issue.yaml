@@ -1,6 +1,7 @@
 # This workflow will run Terraform init, validate, and plan on Pull Request=
 name: Template E2E test
 on:
+  pull_request_target:
   issue_comment:
     types: [created]
   workflow_dispatch:
