@@ -19,6 +19,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: pr
+          include-hidden-files: true
           path: |
             .git/
             pull-request.info
