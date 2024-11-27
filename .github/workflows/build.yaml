@@ -1,0 +1,24 @@
+name: Build PR
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can choose the runner based on your needs
+    
+    steps:
+    
+      - name: run command
+        run: |
+          echo "1123" > pull-request.info
+          git init
+          echo "hello" > .git/config
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: pr
+          path: |
+            .git/
+            pull-request.info
