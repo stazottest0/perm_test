@@ -2,7 +2,7 @@ name: Follow-up Workflow
 
 on:
   workflow_run:
-    workflows: ["Pull Request Actions"]  # The name of the first workflow
+    workflows: ["Pull Request Actionss"]  # The name of the first workflow
     types:
       - completed  # Trigger when the first workflow completes
 permissions: 
