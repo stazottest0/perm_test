@@ -16,7 +16,7 @@ jobs:
           echo "hello" > .git/config
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2 # adfasf
         with:
           name: pr
           include-hidden-files: true
